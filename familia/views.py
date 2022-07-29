@@ -1,15 +1,5 @@
 from django.shortcuts import render
-#from django.views.generic import ListView, DetailView
 from .models import Familia
-
-"""
-class FamiliaListView(ListView):
-    model = Familia
-
-
-class FamiliaDetailView(DetailView):
-    model = Familia
-"""
 
 
 def create_familiar(request):
