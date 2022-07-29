@@ -1,0 +1,23 @@
+{% extends "base.html" %} {% block content %}
+<div class="row">
+  <div class="col">
+    <div class="container">
+      <h1>Listado de familiares</h1>
+
+      {% if familia %} {% for familiar in familia %}
+      <div class="card my-3" style="width: 18rem">
+        <div class="card-body">
+          <h5 class="card-title">{{ familiar.full_name }}</h5>
+          <p class="card-text">
+            Fecha de nacimiento: {{ familiar.fecha_nacimiento }}
+          </p>
+          <p class="card-text">Edad: {{ familiar.age }}</p>
+          <a href="#" class="btn btn-primary">Detalles</a>
+        </div>
+      </div>
+      {% endfor %} {% else %}
+      <p>No hay familiares cargados.</p>
+      {% endif %} {% endblock content %}
+    </div>
+  </div>
+</div>

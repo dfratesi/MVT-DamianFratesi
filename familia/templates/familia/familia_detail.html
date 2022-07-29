@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block title %}Familiar{% endblock title %}
+
+{% block content %}
+<h1>{{ familia.full_name }}</h1>
+<h2>{{ familia.relation }}</h2>
+<p>Tiene {{ familia.age }} años.</p>
+{% endblock content %}
