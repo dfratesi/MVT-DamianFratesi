@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import get_object_or_404, render
 from .models import Familia
 
 
@@ -26,3 +26,11 @@ def list_familia(request):
         'familia': familia,
     }
     return render(request, 'familia/familia_list.html', context=context)
+
+
+def familiar(request, pk):
+    familiar = get_object_or_404(Familia, pk=pk)
+    context = {
+        'familiar': familiar,
+    }
+    return render(request, 'familia/familia_detail.html', context=context)

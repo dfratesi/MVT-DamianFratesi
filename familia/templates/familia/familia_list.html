@@ -14,7 +14,9 @@
             Fecha de nacimiento: {{ familiar.fecha_nacimiento }}
           </p>
           <p class="card-text">Edad: {{ familiar.age }} años.</p>
-          <a href="#" class="btn btn-primary">Detalles</a>
+          <a href="{{ familiar.get_absolute_url }}" class="btn btn-primary">
+            Detalles
+          </a>
         </div>
       </div>
       {% endfor %} {% else %}

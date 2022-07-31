@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 
 
 class Familia(models.Model):
@@ -28,6 +29,9 @@ class Familia(models.Model):
 
     def __str__(self):
         return self.full_name()
+
+    def get_absolute_url(self):
+        return reverse('familia:familiar-detail', args=[str(self.id)])
 
     class Meta:
         ordering = ['lastname', 'name']
